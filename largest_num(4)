@@ -1,0 +1,20 @@
+#Write a Python program to get the largest number from a list
+#input
+n = int(input("Enter the number of elements: "))
+x=[]
+for i in range(n):
+    y=int(input(f"Enter number {i+1}: "))
+    x.append(y)
+largest = max(x)
+print("The largest number is:", largest)
+#output
+    """
+Enter the number of elements: 5
+Enter number 1: 12
+Enter number 2: 45
+Enter number 3: 2
+Enter number 4: 89
+Enter number 5: 33
+The largest number is: 89
+
+    """
