@@ -1,0 +1,27 @@
+
+# Create a 3D plot.
+
+# INPUT
+# Small3DPlot.py
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Sample 3D data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+z = [5, 7, 4, 6, 9]
+
+# Create 3D figure
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# 3D Scatter plot
+ax.scatter(x, y, z, color='red', s=50)
+
+# Labels and title
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+ax.set_title('Simple 3D Scatter Plot')
+
+plt.show()
