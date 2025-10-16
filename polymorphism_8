@@ -1,0 +1,55 @@
+#polymorphism
+#input
+# Base class
+class Animal:
+    def make_sound(self):
+        print("Some generic animal sound")
+
+# Derived class 1
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog says: bow! bow!")
+
+# Derived class 2
+class Cat(Animal):
+    def make_sound(self):
+        print("Cat says: Meow!")
+
+# Derived class 3
+class Bird(Animal):
+    def make_sound(self):
+        print("Bird says: Chirp! Chirp!")
+
+# Function to demonstrate polymorphism
+def animal_sound(animal):
+    animal.make_sound()
+
+# --- Dynamic part ---
+print("Choose an animal:")
+print("1. Dog")
+print("2. Cat")
+print("3. Bird")
+
+choice = input("Enter your choice (1/2/3): ")
+
+if choice == "1":
+    animal = Dog()
+elif choice == "2":
+    animal = Cat()
+elif choice == "3":
+    animal = Bird()
+else:
+    print("Invalid choice!")
+    exit()
+
+# Demonstrate polymorphism
+animal_sound(animal)
+
+#output
+    """Choose an animal:
+1. Dog
+2. Cat
+3. Bird
+Enter your choice (1/2/3): 1
+Dog says: bow! bow!
+    """
