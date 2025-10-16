@@ -1,0 +1,67 @@
+#Write a Python program To get help on the add function
+# Write a NumPy program using methods – info, add, array, all, greater, greater_equal, less and 
+# less_equal, equal, allclose, zeros, ones, linspace, tolist.
+#  a. To get help on the add function
+#  b. To test whether none of the elements of a given array is zero.
+#  c. To create an element-wise comparison (greater, greater_equal, less and less_equal, equal, allclose) of two given arrays
+
+# INPUT
+
+import numpy as np
+
+# a. Get help on the add function
+print("=== Help on np.add function ===")
+help(np.add)
+
+# b. User input array and check if none of the elements are zero
+x = np.array(list(map(int,input("\nEnter numbers for array (space-separated): ").split())))
+print("Array:",x)
+print("None of the elements are zero:", np.all(x))
+
+# c. User input for two arrays
+y = np.array(list(map(int,input("\nEnter numbers for first array (space-separated): ").split())))
+z = np.array(list(map(int,input("Enter numbers for first array (space-separated): ").split())))
+print("\nArray Y:", y)
+print("Array Z:", z)
+
+# Element-wise comparisons
+print("Greater:",np.greater(y,z))
+print("Greater Equal:",np.greater_equal(y,z))
+print("Less:",np.less(y,z))
+print("Less Equal:",np.less_equal(y,z))
+print("Equal:",np.equal(y,z))
+print("All Close:",np.allclose(y,z))
+
+# Additional array operations
+print("\nZeros array:",np.zeros(5))
+print("Ones array:",np.ones(4))
+print("Linspace array:",np.linspace(0,10,5))
+print("Convert to list:",np.array([10,20,30,40]).tolist())
+
+# OUTPUT
+"""
+=== Help on np.add function ===
+(add documentation displayed)
+
+Enter numbers for array (space-separated): 10 0 9 4 5
+Array: [10  0  9  4  5]
+None of the elements are zero: False
+
+Enter numbers for first array (space-separated): 10 6 5 2 4
+Enter numbers for first array (space-separated): 30 7 4 1 2
+
+Array Y: [10  6  5  2  4]
+Array Z: [30  7  4  1  2]
+Greater: [False False  True  True  True]
+Greater Equal: [False False  True  True  True]
+Less: [ True  True False False False]
+Less Equal: [ True  True False False False]
+Equal: [False False False False False]
+All Close: False
+
+Zeros array: [0. 0. 0. 0. 0.]
+Ones array: [1. 1. 1. 1.]
+Linspace array: [ 0.   2.5  5.   7.5 10. ]
+Convert to list: [10, 20, 30, 40]
+
+"""
