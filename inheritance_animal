@@ -1,0 +1,43 @@
+#
+#Write a Python program that demonstrates inheritance by creating a base class Animal and derived classes like Dog, Cat, etc., each with their specific behaviors
+#input
+
+# Base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+# Derived class 1
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} says Woof! Woof!")
+
+# Derived class 2
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} says Meow!")
+
+# Derived class 3 (optional extra)
+class Cow(Animal):
+    def speak(self):
+        print(f"{self.name} says Moo!")
+
+# Create objects of each derived class
+dog1 = Dog("Buddy")
+cat1 = Cat("Whiskers")
+cow1 = Cow("Daisy")
+
+# Call their specific behaviors
+dog1.speak()
+cat1.speak()
+cow1.speak()
+
+#output
+    """
+Buddy says Woof! Woof!
+Whiskers says Meow!
+Daisy says Moo!
+    """
