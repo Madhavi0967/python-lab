@@ -1,0 +1,35 @@
+#Write a Python program that defines a Car class with attributes like make, model, and year, and methods like start() to start the car and stop() to stop it
+#input
+# Define the Car class
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    # Method to start the car
+    def start(self):
+        print(f"The {self.year} {self.make} {self.model} is starting...")
+
+    # Method to stop the car
+    def stop(self):
+        print(f"The {self.year} {self.make} {self.model} is stopping...")
+
+# Dynamic input from user
+make = input("Enter car make: ")
+model = input("Enter car model: ")
+year = input("Enter car year: ")
+
+# Create an object of Car class using user input
+my_car = Car(make, model, year)
+
+# Call the methods
+my_car.start()
+my_car.stop()
+#output
+    """Enter car make: tesla
+Enter car model: 3
+Enter car year: 2024
+The 2024 tesla 3 is starting...
+The 2024 tesla 3 is stopping...
+    """
